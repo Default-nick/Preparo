@@ -87,7 +87,7 @@ body{
 #profileMenu{
     position: relative;
 }
-.buttonProfile{
+#buttonProfile{
     border: none;
     outline: none;
     background: none;
@@ -135,6 +135,10 @@ body{
     font-family: Lato;
     color: #4A5968;
     font-size: .886em;
+}
+.modalProfileItem:hover{
+    color: #C93B59;
+    cursor: pointer;
 }
 #line{
     width: 100%;

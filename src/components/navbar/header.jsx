@@ -29,7 +29,7 @@ export default class Header extends React.Component {
                         </svg>
                     </div>
                     <div id="profile">
-                    <button class="buttonProfile" type="button">
+                    <button id="buttonProfile" type="button">
                         <svg width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="21" cy="21" r="18" fill="#3B4B5B">
                             </circle>
