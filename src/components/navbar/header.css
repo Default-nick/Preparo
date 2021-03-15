@@ -78,7 +78,7 @@ body{
 }
 #notify:active{
     background-color: rgba(0, 0, 0, 0.23);
-    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; 
+    transition: all 200ms;
     cursor: pointer;
 }
 #profileNotify{
@@ -88,6 +88,67 @@ body{
     align-items: center;
     justify-content: flex-end;
     position: relative;
+}
+#modalNotify{
+    background-color: #FFFFFF;
+    border: #C7C8C8 1px solid;
+    position: absolute;
+    width: 100%;
+    max-width: 415px;
+    height: 85px;
+    max-height: 379px;
+    right: 13px;
+    top: 55px;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: #9F9F9F 1px 1px 10px 2px;
+}
+#notifyTitle{
+    display: flex;
+    width: 30%;
+    position: absolute;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 20px;
+    top: 20px;
+}
+#notifyCounter{
+    color: #FFFFFF;
+    font-size: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555C5E;
+    border-radius: 10px;
+    width: 31px;
+    height: 18px;
+    top: 8px;
+    left: 145px;
+}
+#cleanNotify{
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 12px;
+    position: relative;
+    color: #c93b59;
+    display: flex;
+    justify-content: flex-end;
+    bottom: 24px;
+    right: 20px;
+}
+#notifyText{
+    font-family: Lato;
+    color: #3B4B5B;
+    font-weight: 400;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 15px;
 }
 #profileMenu{
     position: relative;
@@ -113,6 +174,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    display: none;
 }
 #modalArrow{
     background-color: #C7C8C8;

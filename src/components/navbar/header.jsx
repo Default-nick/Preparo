@@ -42,6 +42,10 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                 <div id="modalNotify">
+                    <span id="notifyTitle">Notificações</span>
+                    <div id="notifyCounter">0</div>
+                    <span id="cleanNotify">Limpar notificações</span>
+                    <span id="notifyText">Você não tem nenhuma notificação</span>
                 </div>
                 <div id="modalProfile">
                     <span id="modalArrow"><span id="modalArrowInside"></span></span>
