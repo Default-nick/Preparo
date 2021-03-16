@@ -3,8 +3,22 @@ import React from "react"
 
 // Topo, menu
 
+
+
 export default class Header extends React.Component {
+    state = {
+        modalNotify:false,
+        modalProfile:false
+    }
     render () {
+        var showNotify = e =>{
+            this.setState({modalNotify:!this.state.modalNotify});
+        }
+        var showProfile = e =>{
+            this.setState({modalProfile:!this.state.modalProfile});
+        }
+        const notify = this.state.modalNotify;
+        const profile = this.state.modalProfile;
         return(
             <section id="header">
                 <div class="navMenu">
@@ -22,14 +36,14 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                 <div id="profileNotify">
-                    <div id="notify">
+                    <div onClick={showNotify} id="notify">
                         <svg width="25" height="24" class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" >
                             <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z">
                             </path>
                         </svg>
                     </div>
                     <div id="profile">
-                    <button id="buttonProfile" type="button">
+                    <button onClick={showProfile} id="buttonProfile" type="button">
                         <svg width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="21" cy="21" r="18" fill="#3B4B5B">
                             </circle>
@@ -41,12 +55,15 @@ export default class Header extends React.Component {
                         </button>
                     </div>
                 </div>
+                {notify &&(
                 <div id="modalNotify">
                     <span id="notifyTitle">Notificações</span>
                     <div id="notifyCounter">0</div>
                     <span id="cleanNotify">Limpar notificações</span>
                     <span id="notifyText">Você não tem nenhuma notificação</span>
-                </div>
+                </div>)
+                }
+                {profile &&(
                 <div id="modalProfile">
                     <span id="modalArrow"><span id="modalArrowInside"></span></span>
                     <span class="modalProfileItem">Dados básicos</span>
@@ -73,7 +90,8 @@ export default class Header extends React.Component {
                         </svg>
                         Sair
                     </span>
-                </div>
+                </div>)
+                }
             </section>
         );
     }

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    background-color: #F1F1F1;
+}
+.profilePanel{
+    padding-top: 72px;
+    width: 100%;
+    height: 100vh;
+    border: lime 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.profileModal{
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFCFC;
+    border: #DCDCDC solid 1px;
+    border-radius: .5rem;
+    width: 72%;
+    height: 480px;
+    box-shadow: #DCDCDC 0px 4px 10px 1px;
+    padding: 20px;
+}
+#profileTitle{
+    font-size: 15px;
+    color: #34383E;
+    font-family: Lato;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-top: 72px;
+}
+#instructionsProfile{
+    font-family: Lato;
+    color: #C93B59;
+    font-size: 1.5em;
+}
+#instrucionsLine{
+    width: 100%;
+    height: 0px;
+    border-bottom: #B53550 1px solid;
+    margin: 15px 0px 15px 0px;
+}
+#textProfile1{
+    font-family: Lato;
+    color: #212529;
+    line-height: 25px;
+    font-weight: 400;
+    font-size: 1em;
+}
+ul {
+    list-style-type: none;
+    margin-left: 30px;
+    margin-top: 20px;
+    font-family: Lato;
+    font-weight: 400;
+}
+i{
+    margin: 5px;
+    color: #C93B59;
+}
+.boldInfo{
+    font-weight: bolder;
+}
+.lightText{
+    margin: 10px;
+    color: #6C757D;
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+#wpInfo{
+    text-decoration: none;
+    color: #28A745;
+}
+#wpInfo:hover{
+    text-decoration: underline;
+    color: #28A745;
+}
+#wpIco{
+    color: #28A745;
+}
+#finalInfo{
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: Lato;
+    color: #C93B59;
+    margin: 10px;
+}
