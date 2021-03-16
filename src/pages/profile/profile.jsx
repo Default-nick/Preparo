@@ -20,7 +20,7 @@ export default class Profile extends React.Component {
                         <li><i class="icon fas fa-book"></i>para atualizar suas <span class="boldInfo">experiências</span> (estágios, trabalhos voluntários, intercâmbios, etc.).</li>
                         <li><i class="icon fas fa-award"></i>para atualizar suas <span class="boldInfo">premiações</span> (ex.: olimpíadas científicas).</li>
                     </ul>
-                    <span class="lightText">Se sentir falta de algum campo, conte-nos por<a id="wpInfo" target="_blank" href="https://wa.me/5511934723784?text=Ol%C3%A1%2C+Preparo%21"><i id="wpIco" class=" fab fa-whatsapp"></i>Whatsapp</a> o que você gostaria de ver por aqui.</span>
+                    <span class="lightText">Se sentir falta de algum campo, conte-nos por<a id="wpInfo" target="_blank" rel="noreferrer" href="https://wa.me/5511934723784?text=Ol%C3%A1%2C+Preparo%21"><i id="wpIco" class=" fab fa-whatsapp"></i>Whatsapp</a> o que você gostaria de ver por aqui.</span>
                     <span class="lightText">Se tiver algum problema com preenchimento, alguma dúvida ou sugestão contate-nos também.</span>
                     <span id="finalInfo">* Campos Obrigatórios para a candidatura em uma vaga.</span>
                 </div>
