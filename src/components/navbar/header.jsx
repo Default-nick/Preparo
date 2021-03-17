@@ -66,9 +66,9 @@ export default class Header extends React.Component {
                 {profile &&(
                 <div id="modalProfile">
                     <span id="modalArrow"><span id="modalArrowInside"></span></span>
-                    <span class="modalProfileItem">Dados básicos</span>
+                    <span class="modalProfileItem"><a href="/formProfile">Dados básicos</a></span>
                     <span class="modalProfileItem">Currículo</span>
-                    <span class="modalProfileItem">Localização</span>
+                    <span class="modalProfileItem"><a href="/localization">Localização</a></span>
                     <span class="modalProfileItem">Identificação</span>
                     <span class="modalProfileItem">Formação</span>
                     <span class="modalProfileItem">Habilidades</span>

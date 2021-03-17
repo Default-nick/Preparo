@@ -1,14 +1,13 @@
 import React from 'react';
-import Header from './components/navbar/header.jsx';
 import ReactDOM from 'react-dom';
-// import BasicData from './pages/basicData/basicData';
+import Header from './components/navbar/header.jsx';
 import NavBarMobile from './components/navbarMobile/navBarMobile.jsx';
-import Localization from './pages/local/localization'
+import App from './App';
 
 ReactDOM.render (
     <React.StrictMode>
         <Header/>
-        <Localization/>
+        <App/>
         <NavBarMobile/>
     </React.StrictMode>,
     document.getElementById('root')
