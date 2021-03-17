@@ -68,6 +68,9 @@ i{
 .boldInfo{
     font-weight: bolder;
 }
+.redEmphasis{
+    color: #C93B59;
+}
 .lightText{
     margin: 10px;
     color: #6C757D;

@@ -11,7 +11,7 @@ function App() {
     return (
         <Router>
         <Switch>
-            <Route path="/" component={Perfil} /> 
+            <Route path="/pageProfile" component={Perfil} /> 
         </Switch>
         </Router>
     )
