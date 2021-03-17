@@ -9,7 +9,7 @@ body{
     background-color: #F1F1F1;
 }
 .profilePanel{
-    padding-top: 72px;
+    padding-top: 10%;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -24,7 +24,6 @@ body{
     border: #DCDCDC solid 1px;
     border-radius: .5rem;
     width: 72%;
-    height: 480px;
     box-shadow: #DCDCDC 0px 4px 10px 1px;
     padding: 20px;
 }
@@ -35,8 +34,7 @@ body{
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 30px;
-    margin-top: 72px;
+    margin-bottom: 2%;
 }
 #instructionsProfile{
     font-family: Lato;
@@ -90,8 +88,18 @@ i{
 }
 #finalInfo{
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 1em;
     font-family: Lato;
     color: #C93B59;
     margin: 10px;
+}
+@media(max-width:768px){
+    .profilePanel{
+        padding-top: 17%;
+        height: fit-content;
+        padding-bottom: 72px;
+    }
+    .profileModal{
+        width: 90%;
+    }
 }

@@ -56,7 +56,6 @@
 }
 .MuiSvgIcon-root>path{
     fill: currentColor;
-    color: rgb(201, 59, 89);
     position: relative;
 }
 #notify{
