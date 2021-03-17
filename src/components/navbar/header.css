@@ -214,6 +214,10 @@
     margin-bottom: -5px;
     margin-right: 10px;
 }
+a{
+    text-decoration: none;
+    color: currentColor;
+}
 @media(max-width:768px){
     .menu{
         display: none;

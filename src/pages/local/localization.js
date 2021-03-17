@@ -1,13 +1,11 @@
 import React from 'react';
-import Localization  from './localization'
+import Localization  from './localization-template'
 
 export default class LocalizationComponent extends React.Component {
     render(){
         return(
             <section>
-                <React.StrictMode>
                     <Localization/>
-                </React.StrictMode>,
             </section>
         )
     }

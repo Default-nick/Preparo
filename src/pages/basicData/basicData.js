@@ -1,13 +1,11 @@
 import React from 'react';
-import BasicData from './basicData'
+import BasicData from './basicData-template'
 
 export default class BasicDataComponent extends React.Component {
     render(){
         return(
             <section>
-                <React.StrictMode>
                     <BasicData/>
-                </React.StrictMode>,
             </section>
         )
     }

@@ -1,4 +1,3 @@
-import './localization.css'
 import React from 'react'
 
 export default class Localization extends React.Component {
