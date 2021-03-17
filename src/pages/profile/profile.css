@@ -95,9 +95,9 @@ i{
 }
 @media(max-width:768px){
     .profilePanel{
-        padding-top: 23%;
+        padding-top: 24%;
         height: fit-content;
-        padding-bottom: 72px;
+        padding-bottom: 18%;
     }
     .profileModal{
         width: 90%;
