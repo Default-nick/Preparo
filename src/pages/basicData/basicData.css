@@ -89,6 +89,11 @@ body{
     border: #CED4DA solid 2px;
     height: 5vh;
 }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 #submitFormButton{
     margin: 1%;
     font-family: Lato;

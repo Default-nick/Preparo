@@ -2,6 +2,29 @@ import './basicData.css'
 import React from 'react'
 
 export default class BasicData extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {value: ''};
+        this.digitarPesquisa = this.digitarPesquisa.bind(this)
+        this.validar = this.validar.bind(this)
+    }
+// Validação para remover #
+    digitarPesquisa(event){
+        var auxiliar = event.target.value.replace(/[#]/g,"");
+        this.setState({
+            value: auxiliar
+        })
+    }
+// Validação para quantidade de caracteres
+    validar(event){
+        event.preventDefault();
+        if(this.state.value.length < 3){
+            alert ('Não há caracteres o suficiente para resultar numa busca.');
+        }
+        if(this.state.value.length > 140){
+            alert ('Número máximo de caracteres atingido.');
+        }
+    }
     render () {
         return(
             <form className="editProfile">
@@ -23,11 +46,11 @@ export default class BasicData extends React.Component {
                         <span id="titleEditProfile">Email</span>
                         <span id="textEditProfile">Você pode alterar seu email</span>
                     </div>
-                    <div className="secondSection">
+                    <form className="secondSection" onSubmit={this.validar}>
                         <span id="textEditProfile">Email <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="email@exemplo.com.br" required></input>
-                        <button id="upEmail" className="blueButton">Atualizar email</button>
-                    </div>
+                        <button id="upEmail" type="submit" value={this.state.value} onChange={this.digitarPesquisa} className="blueButton">Atualizar email</button>
+                    </form>
                 </div>
                 <div className="cardProfileSection">
                     <div className="firstSection">
@@ -40,7 +63,7 @@ export default class BasicData extends React.Component {
                         <span id="textEditProfile">Sobrenome <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="Digite seu sobrenome" required></input>
                         <span id="textEditProfile">Telefone <span className="redEmphasis">*</span></span>
-                        <input className="inputProfile" placeholder="(00) 00000-0000" required></input>
+                        <input className="inputProfile" type="number" placeholder="(00) 00000-0000" required></input>
                     </div>
                 </div>
                 <div className="cardProfileSection">
