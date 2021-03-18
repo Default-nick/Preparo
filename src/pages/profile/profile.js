@@ -9,5 +9,4 @@ export default class ProfileComponent extends React.Component {
             </section>
         )
     }
-    
 }

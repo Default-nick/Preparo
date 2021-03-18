@@ -11,11 +11,11 @@ export default class Localization extends React.Component {
                         <span id="textEditProfile">Preencha seus dados de Localização. Sempre os mantenha atualizado.</span>
                     </div>
                     <div className="secondSection">
-                    <span id="textEditProfile">CEP <span class="redEmphasis">*</span></span>
+                    <span id="textEditProfile">CEP <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="12345-678" required></input>
-                        <span id="textEditProfile">Cidade <span class="redEmphasis">*</span></span>
+                        <span id="textEditProfile">Cidade <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="Insira o nome de sua cidade atual" required></input>
-                        <span id="textEditProfile">Estado <span class="redEmphasis">*</span></span>
+                        <span id="textEditProfile">Estado <span className="redEmphasis">*</span></span>
                         <input type="text" className="inputProfile" list="stateSelect" placeholder="Selecione o Estado"/>
                         <datalist id="stateSelect" placeholder="Selecione o Estado" required>
                             <option className="optionListRow" unselectable>Selecione o Estado</option>
@@ -47,13 +47,13 @@ export default class Localization extends React.Component {
                             <option className="optionListRow">SP</option>
                             <option className="optionListRow">TO</option>
                         </datalist>
-                        <span id="textEditProfile">Bairro <span class="redEmphasis">*</span></span>
+                        <span id="textEditProfile">Bairro <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="Insira o nome de seu bairro" required></input>
-                        <span id="textEditProfile">Endereço <span class="redEmphasis">*</span></span>
+                        <span id="textEditProfile">Endereço <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="Insira seu endereço" required></input>
-                        <span id="textEditProfile">Número <span class="redEmphasis">*</span></span>
+                        <span id="textEditProfile">Número <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="Insira o número de sua residência" required></input>
-                        <span id="textEditProfile">Complemento <span class="redEmphasis">*</span></span>
+                        <span id="textEditProfile">Complemento <span className="redEmphasis">*</span></span>
                         <input className="inputProfile" placeholder="Insira um complemento se achar necessário" required></input>
                     </div>
                 </div>
