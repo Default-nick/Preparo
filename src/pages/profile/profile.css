@@ -99,6 +99,7 @@ i{
     color: #C93B59;
     margin: 10px;
 }
+/* Versão Mobile */
 @media(max-width:768px){
     .profilePanel{
         padding-top: 24%;

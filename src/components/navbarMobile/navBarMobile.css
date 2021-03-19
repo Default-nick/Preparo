@@ -6,7 +6,7 @@
         box-sizing: border-box;
         padding: 0;
     }
-    #bottom{
+    #navBarMobile{
         display: flex;
         width: 100%;
         height: 10vh;
@@ -15,6 +15,7 @@
         bottom: 0px;
         background-color: #e4e6e7;
     }
+    /* Botão "explorar" */
     #searchMobileButton{
         grid-column: 1/2;
         color: gray;
@@ -29,6 +30,10 @@
     #searchMobileButton:hover{
         text-decoration: underline;
     }
+    #searchMobileButton:active{
+        background-color: rgba(0, 0, 0, 0.23);
+    }
+    /* Botão "inscrições" */
     #subscribeMobileButton{
         grid-column: 2/3;
         color: gray;
@@ -43,6 +48,10 @@
     #subscribeMobileButton:hover{
         text-decoration: underline;
     }
+    #subscribeMobileButton:active{
+        background-color: rgba(0, 0, 0, 0.23);
+    }
+    /* Botão "notificações" */
     #mobileNotifyButton{
         grid-column: 3/3;
         color: gray;
@@ -54,6 +63,12 @@
         align-items: center;
         cursor: pointer;
     }
+    #mobileNotifyButton:hover{
+        text-decoration: underline;
+    }
+    #mobileNotifyButton:active{
+        background-color: rgba(0, 0, 0, 0.23);
+    }
     #mobileIcoText{
         font-family: Lato;
         text-decoration: none;
@@ -64,73 +79,15 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
+    /* Modal de notificações para Mobile */
     #modalNotify{
-        background-color: #FFFFFF;
-        border: #C7C8C8 1px solid;
-        position: absolute;
-        width: 100%;
-        max-width: 415px;
-        height: 85px;
-        max-height: 379px;
-        right: 0px;
+        right: 3px;
         top: -85px;
-        border-radius: .3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        box-shadow: #9F9F9F 0px 4px 10px 1px;
-    }
-    #notifyTitle{
-        display: flex;
-        width: 30%;
-        position: absolute;
-        font-family: Lato;
-        font-weight: 700;
-        font-size: 20px;
-        margin-left: 20px;
-        top: 20px;
-    }
-    #notifyCounter{
-        color: #FFFFFF;
-        font-size: 12px;
-        font-family: Lato;
-        font-weight: 700;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #555C5E;
-        border-radius: 10px;
-        width: 31px;
-        height: 18px;
-        top: 8px;
-        left: 145px;
-    }
-    #cleanNotify{
-        font-family: Lato;
-        font-weight: 400;
-        font-size: 13px;
-        position: relative;
-        color: #c93b59;
-        display: flex;
-        justify-content: flex-end;
-        bottom: 24px;
-        right: 20px;
-    }
-    #notifyText{
-        font-family: Lato;
-        color: #3B4B5B;
-        font-weight: 400;
-        font-size: 14px;
-        width: 100%;
-        display: flex;
-        position: absolute;
-        justify-content: center;
-        bottom: 15px;
     }
 }
+/* desabilitar menu mobile em versões desktop */
 @media(min-width:768px){
-    #bottom{
+    #navBarMobile{
         display: none;
     }
 }

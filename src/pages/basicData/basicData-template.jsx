@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 
 export default function BasicData(){
+    // Validador para o campo "Telefone"
     const {register, handleSubmit, errors} = useForm();
     const onSubmit = data => console.log(data);
     const [value, setValue] = useState('');
@@ -14,6 +15,7 @@ export default function BasicData(){
     }
     return(
         <form onSubmit={handleSubmit(onSubmit)} className="editProfile">
+            {/* Seção "Foto do Perfil" */}
             <div className="cardProfileSection">
                 <div className="firstSection">
                     <span id="titleEditProfile">Foto do Perfil</span>
@@ -27,6 +29,7 @@ export default function BasicData(){
                     <button id="upPhoto" className="blueButton">Carregar foto</button>
                 </div>
             </div>
+            {/* Seção "Email" */}
             <div className="cardProfileSection">
                 <div className="firstSection">
                     <span id="titleEditProfile">Email</span>
@@ -34,11 +37,12 @@ export default function BasicData(){
                 </div>
                 <div className="secondSection">
                     <span id="textEditProfile">Email <span className="redEmphasis">*</span></span>
-                    <input className="inputProfile" name="emailInput" ref={register({ required: true })} placeholder="email@exemplo.com.br"></input>
+                    <input className="inputProfile" name="emailInput" ref={register({ required: true })} placeholder="email@exemplo.com.br"/>
                     {errors.emailInput && <span className="redEmphasis">Você precisa inserir um email</span>}
                     <button id="upEmail" type="submit" className="blueButton">Atualizar email</button>
                 </div>
             </div>
+            {/* Seção "Instruções" */}
             <div className="cardProfileSection">
                 <div className="firstSection">
                     <span id="titleEditProfile">Instruções</span>
@@ -46,17 +50,17 @@ export default function BasicData(){
                 </div>
                 <div className="secondSection">
                     <span id="textEditProfile">Nome <span className="redEmphasis">*</span></span>
-                    <input className="inputProfile" type="text" name="nameInput" ref={register({ required: true })} placeholder="Digite seu nome"></input>
+                    <input className="inputProfile" type="text" name="nameInput" ref={register({ required: true })} placeholder="Digite seu nome"/>
                     {errors.nameInput && <span className="redEmphasis">Você precisa inserir pelo menos um nome</span>}
                     <span id="textEditProfile">Sobrenome <span className="redEmphasis">*</span></span>
-                    <input className="inputProfile" type="text" name="surnameInput" ref={register({ required: true })} placeholder="Digite seu sobrenome"></input>
+                    <input className="inputProfile" type="text" name="surnameInput" ref={register({ required: true })} placeholder="Digite seu sobrenome"/>
                     {errors.surnameInput && <span className="redEmphasis">Você precisa inserir pelo menos um sobrenome</span>}
                     <span id="textEditProfile">Telefone <span className="redEmphasis">*</span></span>
-                    <input className="inputProfile" maxLength="12" value={value} onChange={e => phoneValidate(e.target.value)} name="phoneNumber" ref={register({ required: true })} placeholder="(00) 00000-0000"></input>
-                    {errors.phoneNumber && <span className="redEmphasis">Você precisa inserir um número de telefone com ddd
-</span>}
+                    <input className="inputProfile" maxLength="12" value={value} onChange={e => phoneValidate(e.target.value)} name="phoneNumber" ref={register({ required: true })} placeholder="(00) 00000-0000"/>
+                    {errors.phoneNumber && <span className="redEmphasis">Você precisa inserir um número de telefone com ddd</span>}
                 </div>
             </div>
+            {/* Seção "Links Pessoais" */}
             <div className="cardProfileSection">
                 <div className="firstSection">
                     <span id="titleEditProfile">Links Pessoais</span>
@@ -64,14 +68,14 @@ export default function BasicData(){
                 </div>
                 <div className="secondSection">
                     <span id="textEditProfile">Github</span>
-                    <input className="inputProfile" placeholder="http://github.com/abcdefghi"></input>
+                    <input className="inputProfile" placeholder="http://github.com/abcdefghi"/>
                     <span id="textEditProfile">Behance</span>
-                    <input className="inputProfile" placeholder="http://www.behance.net/abcdefghi"></input>
+                    <input className="inputProfile" placeholder="http://www.behance.net/abcdefghi"/>
                     <span id="textEditProfile">Linkedin</span>
-                    <input className="inputProfile" placeholder="http://www.linkedin.com/in/abcdefghi"></input>
+                    <input className="inputProfile" placeholder="http://www.linkedin.com/in/abcdefghi"/>
                 </div>
             </div>
-            <input type="submit" id="submitFormButton" label="Atualizar"/>
+            <input type="submit" id="submitFormButton" label="Enviar"/>
         </form>
     );
 }

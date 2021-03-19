@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useForm} from 'react-hook-form';
 
 export default function Localization(){
+    // Validador para o campo "CEP"
     const {register, handleSubmit, errors} = useForm();
     const onSubmit = data => console.log(data);
     const [value, setValue] = useState('');
@@ -15,10 +16,12 @@ export default function Localization(){
         <form onSubmit={handleSubmit(onSubmit)} className="editProfile">
             <span id="profileTitle">Localização</span>
             <div className="cardProfileSection">
+                {/* Lado esquerdo */}
                 <div className="firstSection">
                     <span id="titleEditProfile">Instruções</span>
                     <span id="textEditProfile">Preencha seus dados de Localização. Sempre os mantenha atualizado.</span>
                 </div>
+                {/* Lado direito */}
                 <div className="secondSection">
                 <span id="textEditProfile">CEP <span className="redEmphasis">*</span></span>
                     <input className="inputProfile" name="cepInput" ref={register({ required: true })} type="text" maxLength="9" value={value} onChange={e => cepValidate(e.target.value)} placeholder="12345-678"></input>
@@ -30,7 +33,6 @@ export default function Localization(){
                     <input type="text" className="inputProfile" name="stateInput" ref={register({ required: true })} list="stateSelect" placeholder="Selecione o Estado"/>
                     {errors.stateInput && <span className="redEmphasis">Você precisa inserir o nome de seu estado</span>}
                     <datalist id="stateSelect" width="1500px" placeholder="Selecione o Estado">
-                        <option>Selecione o Estado</option>
                         <option>AC</option>
                         <option>AL</option>
                         <option>AM</option>
@@ -72,7 +74,7 @@ export default function Localization(){
                     <input className="inputProfile"  placeholder="Insira um complemento se achar necessário"></input>
                 </div>
             </div>
-            <input name="formSubmitInput" type="submit" id="submitFormButton" label="Enviar"/>
+            <input name="formSubmitInput" type="submit" id="submitFormButton" ref={register({ required: true })} label="Enviar"/>
             {errors.formSubmitInput && <span className="redEmphasis">Verifique se preencheu corretamente todos os campos</span>}
         </form>
     );

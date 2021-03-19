@@ -3,17 +3,17 @@ import React from "react"
 
 // Topo, menu
 
-
-
 export default class Header extends React.Component {
     state = {
         modalNotify:false,
         modalProfile:false
     }
     render () {
+        // Notificações
         var showNotify = e =>{
             this.setState({modalNotify:!this.state.modalNotify});
         }
+        // Menu de perfil
         var showProfile = e =>{
             this.setState({modalProfile:!this.state.modalProfile});
         }
@@ -35,6 +35,7 @@ export default class Header extends React.Component {
                         <a className="menuItems" href="/"> Inscrições </a>
                     </div>
                 </div>
+                {/* Ícone de notificações */}
                 <div id="profileNotify">
                     <div onClick={showNotify} id="notify">
                         <svg width="25" height="24" className="MuiSvgIcon-root" color="rgb(201, 59, 89)" focusable="false" viewBox="0 0 24 24" aria-hidden="true" >
@@ -42,19 +43,21 @@ export default class Header extends React.Component {
                             </path>
                         </svg>
                     </div>
+                    {/* Ícone de perfil */}
                     <div id="profile">
-                    <button onClick={showProfile} id="buttonProfile" type="button">
-                        <svg width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="21" cy="21" r="18" fill="#3B4B5B">
-                            </circle>
-                        <circle cx="21" cy="14" r="6" fill="#C93B59">
-                            </circle>
-                            <path d="M34 29.706c0 4.257-6.044 1.285-13.5 1.285S7 33.963 7 29.706C7 25.45 13.044 22 20.5 22S34 25.45 34 29.706z" fill="#fff">
-                        </path>
-                        </svg>
-                        </button>
+                        <div onClick={showProfile} id="buttonProfile" >
+                            <svg width="40" height="40" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="21" cy="21" r="18" fill="#3B4B5B">
+                                </circle>
+                            <circle cx="21" cy="14" r="6" fill="#C93B59">
+                                </circle>
+                                <path d="M34 29.706c0 4.257-6.044 1.285-13.5 1.285S7 33.963 7 29.706C7 25.45 13.044 22 20.5 22S34 25.45 34 29.706z" fill="#fff">
+                            </path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
+                {/* Notificação */}
                 {notify &&(
                 <div id="modalNotify">
                     <span id="notifyTitle">Notificações</span>
@@ -63,6 +66,7 @@ export default class Header extends React.Component {
                     <span id="notifyText">Você não tem nenhuma notificação</span>
                 </div>)
                 }
+                {/* Menu do perfil */}
                 {profile &&(
                 <div id="modalProfile">
                     <span id="modalArrow"><span id="modalArrowInside"></span></span>
